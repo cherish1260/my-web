@@ -1,0 +1,30 @@
+# Mac OS X
+.DS_Store
+
+# JetBrains IDE
+.idea
+
+# vscode
+.vscode
+
+# 编译输出目录
+build
+
+# npm模块安装目录
+node_modules
+
+# npm报错日志
+npm-debug.*
+
+# package-lock.json
+package-lock.json
+yarn.lock
+
+# 缓存目录
+cache
+
+# 运行文件
+debug.log
+
+# mock数据
+mock
