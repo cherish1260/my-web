@@ -1,0 +1,16 @@
+@import '../theme/mixin.less';
+
+.header {
+  display: flex;
+  align-items: center;
+  &.ant-layout-header {
+    height: @HEAD_HEIGHT;
+    background-color: @HEAD_BG_COLOR;
+    padding: 0 30px;
+  }
+  .header-title {
+    margin: 0;
+    font-size: @FONT_SIZE * 2;
+    color: #ffffff;
+  }
+}

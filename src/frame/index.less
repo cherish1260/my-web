@@ -1,0 +1,104 @@
+/**
+  框架样式
+*/
+@import './theme/default.less';
+@import './theme/normal.less';
+
+html,
+body,
+#app {
+  font-size: @FONT_SIZE;
+  height: 100vh;
+  background-color: @BG_COLOR_DEFAULT;
+}
+
+.header {
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding-top: @HEAD_HEIGHT;
+  z-index: 5;
+
+  .ant-layout-sider,
+  .ant-layout-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  >aside {
+    border-right: 1px solid #e9e9e9;
+    height: 100%;
+  }
+}
+
+.sider {
+  border-right: 1px solid #eee;
+
+  .ant-menu {
+    border-right: none;
+  }
+}
+
+.content {
+  position: relative;
+  padding: 30px 15px 20px;
+  width: 85vw;
+  box-sizing: border-box;
+
+  .breadcrumb {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+  }
+}
+
+.sider-collapse {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  line-height: 1;
+  color: #dfdfdf;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3 ease;
+
+  .anticon {
+    font-size: 20px;
+    color: #999;
+  }
+}
+
+.ant-modal-confirm-body>.anticon {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu {
+  box-sizing: border-box;
+  position: relative;
+  width: 15vw;
+  height: 100%;
+  padding: 20px 0;
+  border-right: 1px solid #e8e8e8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  user-select: none;
+  background-color: #fff;
+  .ant-menu {
+    border-right: 0;
+  }
+  &.collapsed, .ant-menu-inline-collapsed {
+    width: 60px;
+  }
+  .ant-menu-inline-collapsed > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title{
+    padding:0 22px !important;
+  }
+}

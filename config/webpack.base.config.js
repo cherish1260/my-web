@@ -10,10 +10,11 @@ module.exports = {
   context: SRC_PATH,
   // 定义能够打包的文件，文件后缀名
   resolve: {
-    modules: ['node_modules'],
+    modules: ['node_modules', 'common'],
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       src: SRC_PATH,
+      common: path.resolve(SRC_PATH, 'common'),
       sys: path.resolve(SRC_PATH, 'sys'),
     }
   },
