@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "outDir": "build/lib",
+    "module": "ES6",
+    "target": "es5",
+    "lib": [
+      "es2016",
+      "dom",
+      "es5"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": [
+      "src"
+    ],
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    // "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  // "typedocOptions": {
+  //   "mode": "modules",
+  //   "out": "docs"
+  // },
+}
