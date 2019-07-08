@@ -15,6 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     const { store } = this.props;
     store.setUserName('张三');
+    store.changeUserName();
   }
 
   render() {

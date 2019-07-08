@@ -1,5 +1,15 @@
 import React from 'react';
+import { inject, observer } from 'mobx-react';
 
-export default () => (
-  <div>myinfo</div>
-);
+@inject('store')
+@observer
+class MyInfo extends React.Component {
+  render() {
+    const { store } = this.props;
+    return (
+      <div>myinfo，{store.userName}</div>
+    );
+  }
+}
+
+export default MyInfo;

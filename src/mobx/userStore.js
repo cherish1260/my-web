@@ -6,4 +6,12 @@ export default class UserStore {
   @action setUserName(userName) {
     this.userName = userName;
   }
+
+  @action changeUserName() {
+    setTimeout(this.fetchUserName, 1000);
+  }
+
+  @action.bound fetchUserName() {
+    this.userName = '李四';
+  }
 }
