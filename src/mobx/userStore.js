@@ -8,7 +8,7 @@ export default class UserStore {
   }
 
   @action changeUserName() {
-    setTimeout(this.fetchUserName, 1000);
+    setTimeout(this.fetchUserName, 3000);
   }
 
   @action.bound fetchUserName() {

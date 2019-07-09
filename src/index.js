@@ -6,16 +6,20 @@ import Frame from 'src/frame';
 import routes from 'sys/route';
 import Router from 'router';
 import { Provider, inject, observer } from 'mobx-react';
+import OrderStore from './mobx/orderStore';
 import UserStore from './mobx/userStore';
 
-const userStore = new UserStore();
-@inject('store')
+const stores = {
+  orderStore: new OrderStore(),
+  userStore: new UserStore(),
+};
+@inject('userStore')
 @observer
 class App extends React.Component {
   componentDidMount() {
-    const { store } = this.props;
-    store.setUserName('张三');
-    store.changeUserName();
+    const { userStore } = this.props;
+    userStore.setUserName('张三');
+    userStore.changeUserName();
   }
 
   render() {
@@ -29,7 +33,7 @@ class App extends React.Component {
   }
 }
 render(
-  <Provider store={userStore}>
+  <Provider {...stores}>
     <App />
   </Provider>,
   document.getElementById('app'));

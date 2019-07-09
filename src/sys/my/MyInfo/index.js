@@ -1,13 +1,18 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
-@inject('store')
+@inject('orderStore', 'userStore')
 @observer
 class MyInfo extends React.Component {
+  componentDidMount() {
+    const { orderStore } = this.props;
+    orderStore.setOrderId('6783');
+  }
+
   render() {
-    const { store } = this.props;
+    const { orderStore, userStore } = this.props;
     return (
-      <div>myinfo，{store.userName}</div>
+      <div>myinfo，{userStore.userName}，{orderStore.orderId}</div>
     );
   }
 }
